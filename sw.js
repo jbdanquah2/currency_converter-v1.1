@@ -1,9 +1,9 @@
-const staticCacheName = 'version-4';
+const staticCacheName = 'version-5';
 self.addEventListener('install', event => {
     event.waitUntil(
         caches.open(staticCacheName).then(cache => {
             return cache.addAll([
-       '/',
+       
         '/index.html',
         'css/converter.css',
         'js/indexdb.js',
