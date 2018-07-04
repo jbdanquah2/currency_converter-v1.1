@@ -11,7 +11,8 @@ self.addEventListener('install', event => {
         '/img/converter-512.png',
         '/css/bootstrap.min.css',
         '/js/converter.js',
-        'https://free.currencyconverterapi.com/api/v5/currencies'
+        'https://free.currencyconverterapi.com/api/v5/currencies',      'https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css'
+                
       ])
                 .then(() => self.skipWaiting());
 
@@ -46,14 +47,14 @@ self.addEventListener('activate', event => {
 
 
 addEventListener('fetch', function (event) {
-    
-    const requestUrl = new URL(event.request.url);
-    if (requestUrl.origin === location.origin) {
-        if (requestUrl.pathname === '/') {
-            event.respondWith(caches.match('/'));
-            return;
-        }
-    }
+//    
+//    const requestUrl = new URL(event.request.url);
+//    if (requestUrl.origin === location.origin) {
+//        if (requestUrl.pathname === '/') {
+//            event.respondWith(caches.match('/'));
+//            return;
+//        }
+//    }
         
     event.respondWith(
         caches.match(event.request).then(function (response) {
