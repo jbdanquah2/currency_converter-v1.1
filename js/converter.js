@@ -73,20 +73,19 @@ function toast() {
     setTimeout(() => { x.className = x.className.replace("show", ""); }, 3000);
 }
 
-    
-    
+     
 
-var dbPromise = idb.open('c-convertor', 1, (upgradeDb) => {
-    var keyValStore = upgradeDb.createObjectStore('exchange-rates');
-  });
-  
-  
-  // set"
-  function setVal(key,val){
-   dbPromise.then((db) =>{
-    var tx = db.transaction('exchange-rates', 'readwrite');
-    var keyValStore = tx.objectStore('exchange-rates');
-    keyValStore.put(val, key);
-    return tx.complete;
-  });
-  }
+//var dbPromise = idb.open('c-convertor', 1, (upgradeDb) => {
+//    var keyValStore = upgradeDb.createObjectStore('exchange-rates');
+//  });
+//  
+//  
+//  // set"
+//  function setVal(key,val){
+//   dbPromise.then((db) =>{
+//    var tx = db.transaction('exchange-rates', 'readwrite');
+//    var keyValStore = tx.objectStore('exchange-rates');
+//    keyValStore.put(val, key);
+//    return tx.complete;
+//  });
+//  }
