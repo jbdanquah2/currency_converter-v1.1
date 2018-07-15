@@ -1,4 +1,4 @@
-var staticCacheName = 'version-5';
+const staticCacheName = 'version-1';
 self.addEventListener('install', event => {
     event.waitUntil(
         caches.open(staticCacheName).then(cache => {

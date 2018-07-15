@@ -99,6 +99,10 @@ form {
     color: #e08;
 }
 
+#foot {
+   border-radius: 5px 5px 5px px !important; 
+}
+
 
 /*---------- Toast---------------*/
 
