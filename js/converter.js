@@ -46,7 +46,7 @@ function callback(data, amount, query) {
 
 function GetAsync(amount, currencyFrom, currencyTo, callback) {
     const query = `${currencyFrom}_${currencyTo}`;
-    const url = `https://free.currencyconverterapi.com/api/v4/convert?q=${query}&compact=ultra`;
+    const url = `https://free.currencyconverterapi.com/api/v5/convert?q=${query}&compact=ultra`;
 	
 	fetch(url).then(
 	response => {
