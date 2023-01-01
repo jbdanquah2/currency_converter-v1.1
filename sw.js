@@ -60,7 +60,9 @@ addEventListener('fetch', function (event) {
             if (response) {
                 return response; // if valid response is found in cache return it
             } else {
-                return fetch(event.request).then(function (res) {
+                return fetch(event.request,  {
+                    mode: 'cors',
+                }).then(function (res) {
                     return caches.open(staticCacheName)
                         .then(function (cache) {
                             cache.put(event.request.url, res.clone()); //save the response for future
