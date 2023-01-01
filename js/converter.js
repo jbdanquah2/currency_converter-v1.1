@@ -46,8 +46,10 @@ function callback(data, amount, query) {
 
 function GetAsync(amount, currencyFrom, currencyTo, callback) {
     const query = `${currencyFrom}_${currencyTo}`;
-    const url  = `https://free.currconv.com/api/v7/convert?q=${query}&compact=ultra&apiKey=005da878543e96900ae0`;
-	fetch(url).then(
+    const url  = `https://free.currconv.com/api/v7/convert?q=${query}&compact=ultra&apiKey=999a73e26a7f6b72af20`;
+	fetch(url, {
+        mode: 'cors',
+    }).then(
 	response => {
 		if(response.status == 200){
 			console.log('response', response);

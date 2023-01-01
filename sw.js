@@ -11,7 +11,7 @@ self.addEventListener('install', event => {
         '/img/converter-512.png',
         '/css/bootstrap.min.css',
         '/js/converter.js',
-        'https://free.currencyconverterapi.com/api/v5/currencies', 'https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css'
+        'https://free.currconv.com/api/v7/currencies?apiKey=999a73e26a7f6b72af20', 'https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css'
 
       ]).then(() => self.skipWaiting());
 
